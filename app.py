@@ -11,7 +11,6 @@ import joblib
 
 st.set_page_config(
     page_title="Porter Delivery Time Prediction",
-    page_icon="🚚",
     layout="centered"
 )
 
@@ -78,7 +77,7 @@ feature_columns = load_features()
 # =========================================================
 
 st.title(
-    "🚚 Porter Delivery Time Prediction"
+    "Porter Delivery Time Prediction"
 )
 
 st.markdown(
@@ -99,7 +98,7 @@ st.divider()
 # =========================================================
 
 st.subheader(
-    "📦 Order Information"
+    "Order Information"
 )
 
 col1, col2 = st.columns(2)
@@ -174,7 +173,7 @@ with col2:
 # =========================================================
 
 st.subheader(
-    "🏪 Restaurant Information"
+    "Restaurant Information"
 )
 
 
@@ -195,7 +194,7 @@ store_primary_category = st.selectbox(
 # =========================================================
 
 st.subheader(
-    "🛵 Delivery Partner Information"
+    "Delivery Partner Information"
 )
 
 col1, col2, col3 = st.columns(3)
@@ -464,7 +463,7 @@ def make_prediction():
 
 if st.button(
 
-    "🚚 Predict Delivery Time",
+    "Predict Delivery Time",
 
     use_container_width=True
 
@@ -477,7 +476,7 @@ if st.button(
         # -------------------------------------------------
 
         with st.spinner(
-            "🤖 Calculating delivery time..."
+            "Calculating delivery time..."
         ):
 
             delivery_time = (
@@ -490,7 +489,7 @@ if st.button(
         # -------------------------------------------------
 
         st.success(
-            "✅ Prediction completed successfully!"
+            "Prediction completed successfully!"
         )
 
 
@@ -514,21 +513,21 @@ if st.button(
         if delivery_time < 30:
 
             st.info(
-                "⚡ The estimated delivery time "
+                "The estimated delivery time "
                 "is relatively short."
             )
 
         elif delivery_time < 60:
 
             st.info(
-                "🛵 The estimated delivery time "
+                "The estimated delivery time "
                 "is moderate."
             )
 
         else:
 
             st.warning(
-                "⏳ The estimated delivery time "
+                "The estimated delivery time "
                 "is relatively high."
             )
 
@@ -540,7 +539,7 @@ if st.button(
         # -------------------------------------------------
 
         st.error(
-            "❌ Prediction failed"
+            "Prediction failed"
         )
 
         st.exception(e)
